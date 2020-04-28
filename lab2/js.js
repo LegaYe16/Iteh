@@ -24,17 +24,22 @@ $(document).ready(function () {
         // отослать
         var xhr = new XMLHttpRequest();
         var name = $('#name').val();
-        xhr.open("GET", "Select__Time.php?name=" + name);
+        xhr.open("GET", "Select__Time.php?name=" + name, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = update;
         xhr.send();
         
-        if (xhr.status === 200) {
-            var res = "";
-            let times = xhr.responseXML.firstChild.children;
-            for (var i = 0; i < times.length; i++) {
-                res += times[i].children[0].firstChild.nodeValue + "<br>";
+        function update(){
+            
+            if (xhr.status === 200) {
+                var res = "";
+                let times = xhr.responseXML.firstChild.children;
+                for (var i = 0; i < times.length; i++) {
+                    res += times[i].children[0].firstChild.nodeValue + "<br>";
+                }
+             $('#p_two').html(res);
+            
             }
-         $('#p_two').html(res);
-        
         }
     });
 

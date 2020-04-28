@@ -1,8 +1,8 @@
 <?php
-    $dsn = 'mysql:host=127.0.0.1;dbname=legadb' ;
+    $dsn = 'mysql:host=localhost;dbname=legadb' ;
     try {
         $link = new PDO($dsn, 'root', '');
     } catch (PDOException $e) {
-        echo 'Error: ' . $e->getMessage();
+        echo 'Подключение не удалось: ' . $e->getMessage();
     }
 ?>

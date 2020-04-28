@@ -14,9 +14,9 @@
 <div class="content">
     <div class="first__row">
 
-            <?php
-            require 'config.php';
-            ?>
+        <?php
+        require 'config.php';
+        ?>
 
 
         <div class="form_row">

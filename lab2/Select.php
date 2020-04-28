@@ -14,16 +14,16 @@
     $result_Select__QuantityResult = $Select__QuantityResult->fetchColumn();
     if($result_Select__QuantityResult == 1){
         if(!$result_Select__QuantityResult){
-            echo 'Such a chief does not exist ';
+            echo 'Такого шефа не существует ';
             exit();
         }
-        print_r($name_chief.' has: '.$result_Select__QuantityResult. ' employee');
+        print_r($name_chief.' имеет: '.$result_Select__QuantityResult. ' сотрудникa в своем подчинение');
     }
     else{
         if(!$result_Select__QuantityResult){
-            echo 'Such a chief does not exist ';
+            echo 'Такого шефа не существует ';
             exit();
         }
-        print_r($name_chief.' has: '.$result_Select__QuantityResult. ' employees');
+        print_r($name_chief.' имеет: '.$result_Select__QuantityResult. ' сотрудников в своем подчинение');
     }
 ?>
